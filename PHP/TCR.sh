@@ -1,3 +1,4 @@
 #!/bin/bash
 
-composer test && (git add -A && git commit -m'passed test, committing') || echo failed
+git add -A
+composer test && git commit -m'passed test, committing' || git reset --hard
